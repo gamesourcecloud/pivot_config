@@ -1,0 +1,41 @@
+---
+# Config data
+# config can be modify any time
+# and use push/update command to sync to backend
+service:
+  image: docker-repos:8123/g2/piston:0.6.0.RC0.build38
+  name: piston
+  environment:
+    PISTON_database.port: 6033
+    PISTON_service.game_backend.url: http://alpaca
+    PISTON_service.piston.url: http://piston
+    DATABASE_URL: mysql2://laxino:password@db:6033/g2_piston_production
+    PISTON_PORT: 80
+  cmd: bundle exec thin start
+  bootstrap_cmd: sh migrate.sh migrate
+  expose: 80
+  port: 80
+
+resources:
+  mysql5.7:
+    name: db
+    environment:
+      MYSQL_USER: laxino
+      MYSQL_DATABASE: g2_piston_production
+      MYSQL_PASSWORD: password
+    port: 6033
+  redis4.0.6:
+    name: redis
+  mysql_healthcheck1.0:
+    name: mysql_healthcheck
+    environment:
+      PROBE_HOST : db
+      PROBE_PORT: 6033
+    cmd: probe.yml
+
+# meta do not modify
+meta:
+  id: 1QD0FHNFKZTAYA9N6281JMDP10
+  name: piston1.0
+  kind: service
+  version: 0.4.0

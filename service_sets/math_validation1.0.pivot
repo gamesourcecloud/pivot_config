@@ -1,0 +1,40 @@
+---
+# Config data
+# config can be modify any time,
+# and use push/update command to sync to backend
+services:
+  piston1.0:
+    name: piston
+  piston_worker1.0:
+    cmd: bundle exec sidekiq -r ./sidekiq_workers.rb
+    name: piston_worker
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+  alpaca0.12.0:
+    cmd: bundle exec thin start
+    name: alpaca
+    environment:
+      ALPACA_MATH_VALIDATE: internal
+      APP_PORT: 80
+      APP_HOST: 0.0.0.0
+      WHEEL_URL: http://wheel
+      PLAYER_TOKEN_SECRET: test_key
+  wheel1.2.0:
+    cmd: bundle exec thin start -p 80
+    name: wheel
+    environment:
+      WHEEL_ENV: production
+
+resources:
+  redis4.0.6:
+    name: redis
+  mysql5.7:
+    name: db2
+
+# meta, do not modify
+meta:
+  id: 1QD093VCWYJ0RJANH3GHYVF3P0
+  name: math_validation1.0
+  kind: service_set
+  version: 0.4.0

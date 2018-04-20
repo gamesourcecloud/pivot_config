@@ -1,0 +1,17 @@
+---
+# Config data
+# config can be modify any time,
+# and use push/update command to sync to backend
+service:
+  image: docker-repos:8123/g2/wheel:1.2.0.build30
+  name: wheel
+  environment:
+    WHEEL_ENV: production
+  cmd: bundle exec thin start -p 80
+
+# meta, do not modify
+meta:
+  id: 1QD08RW5XXT7BJ2NJESEPNVCFW
+  name: wheel1.2.0
+  kind: service
+  version: 0.4.0

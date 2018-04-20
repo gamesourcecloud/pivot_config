@@ -1,0 +1,22 @@
+---
+# Config data
+# config can be modify any time,
+# and use push/update command to sync to backend
+service:
+  image: docker-repos:8123/g2/piston-worker:0.6.0.RC0.build15
+  name: piston_worker
+  environment:
+    REDIS_HOST: redis
+    REDIS_PORT: 6379
+  cmd: bundle exec sidekiq -r ./sidekiq_workers.rb
+
+resources:
+  redis4.0.6:
+    name: redis
+
+# meta, do not modify
+meta:
+  id: 1QD08AK5347WT7S9XE7MTD2J58
+  name: piston_worker1.0
+  kind: service
+  version: 0.4.0

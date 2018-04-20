@@ -1,0 +1,19 @@
+---
+# Config data
+# config can be modify any time,
+# and use push/update command to sync to backend,
+# however after push image field are not allow to change.
+resource:
+  image: docker-repos:8123/yale/mysql:1.0.mysql-5.7.13
+  name: db
+  environment:
+    MYSQL_USER: laxino
+    MYSQL_DATABASE: g2_piston_production
+    MYSQL_PASSWORD: password
+
+# meta, do not modify
+meta:
+  id: 1QD07D37E8SBXHKPQ4Y4WA74NR
+  name: mysql5.7
+  kind: resource
+  version: 0.4.0

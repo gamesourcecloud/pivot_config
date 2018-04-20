@@ -1,0 +1,19 @@
+---
+# Config data
+# config can be modify any time,
+# and use push/update command to sync to backend,
+# however after push image field are not allow to change.
+resource:
+  image: cheokman/ansible
+  name: health_check
+  environment:
+    PROBE_HOST: db
+    PROBE_PORT: 3306
+
+# meta, do not modify
+meta:
+  id: 1QD07D37E8SBXHKPQ4Y4WA74NW
+  name: mysql_healthcheck1.0
+  kind: resource
+  exitable: true
+  version: 0.4.0
