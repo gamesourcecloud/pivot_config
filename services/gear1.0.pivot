@@ -1,0 +1,21 @@
+---
+# Config data
+# config can be modify any time,
+# and use push/update command to sync to backend
+service:
+  image: docker-repos:8123/g2/gear:1.0.build122
+  name: gear
+  environment:
+    GEAR_LOG_LEVEL: debug
+    AXLE_URL: http://axle
+    WHEEL_URL: http://wheel
+    GEAR_PORT: 80
+  cmd: bundle exec thin start
+
+
+# meta, do not modify
+meta:
+  id: 01CBXESCP6G72NRX87N1HBP73K
+  name: gear1.0
+  kind: service
+  version: 0.5.0

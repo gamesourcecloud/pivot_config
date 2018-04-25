@@ -1,0 +1,17 @@
+---
+# Config data
+# config can be modify any time,
+# and use push/update command to sync to backend
+services:
+  axle2.0.1:
+  gear1.0:
+  wheel1.3.0:
+  nginx1.0:
+resources:
+  mysql5.7:
+# meta, do not modify
+meta:
+  id: 01CBXF92RWX9HF7MCJ6EEHKX8A
+  name: simulator1.0
+  kind: service_set
+  version: 0.5.0

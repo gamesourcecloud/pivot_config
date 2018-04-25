@@ -1,0 +1,19 @@
+---
+# Config data
+# config can be modify any time,
+# and use push/update command to sync to backend
+service:
+  image: docker-repos:8123/g2/gimbal:1.0.1RC0.build4
+  name: gimbal
+  environment:
+    GIMBAL_PORT: 80
+  cmd: bundle exec thin start
+  expose: 80
+  port: 80
+
+# meta, do not modify
+meta:
+  id: 01CBXTMEJ3YVE87SDEBSDTRRZ5
+  name: gimbal1.0.1
+  kind: service
+  version: 0.5.0
