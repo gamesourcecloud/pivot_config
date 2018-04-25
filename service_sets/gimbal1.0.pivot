@@ -9,7 +9,7 @@ services:
     environment:
       GIMBAL_PORT: 80
     port: 80
-    expose: 80
+    expose: 8083
 
 # meta, do not modify
 meta:
