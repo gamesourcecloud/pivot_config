@@ -5,13 +5,7 @@
 service:
   image: nginx:latest
   name: game_client
-  expose: 80
-  port: 80
-  volume:
-    container_path: /usr/share/nginx/html
-    host_path: /home/chongin/builds/development 
-
-
+ 
 # meta, do not modify
 meta:
   id: 01CBTTYB4Q6DTPDCZWBCBDRBET

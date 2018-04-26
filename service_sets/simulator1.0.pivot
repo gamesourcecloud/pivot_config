@@ -4,9 +4,9 @@
 # and use push/update command to sync to backend
 services:
   axle2.0.1:
-  gear1.0:
+  game_backend1.0:
   wheel1.3.0:
-  nginx1.0:
+  game_client1.0:
 resources:
   mysql5.7:
 # meta, do not modify

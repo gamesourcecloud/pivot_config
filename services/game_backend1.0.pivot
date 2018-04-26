@@ -4,7 +4,7 @@
 # and use push/update command to sync to backend
 service:
   image: docker-repos:8123/g2/gear:1.0.build122
-  name: gear
+  name: game_backend
   environment:
     GEAR_LOG_LEVEL: debug
     AXLE_URL: http://axle
@@ -16,6 +16,6 @@ service:
 # meta, do not modify
 meta:
   id: 01CBXESCP6G72NRX87N1HBP73K
-  name: gear1.0
+  name: game_backend1.0
   kind: service
   version: 0.5.0
