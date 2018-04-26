@@ -15,6 +15,7 @@ service:
   bootstrap_cmd: sh migrate.sh migrate
   expose: 80
   port: 80
+  use_external_network: true
 
 resources:
   mysql5.7:
