@@ -10,6 +10,7 @@ service:
   cmd: bundle exec thin start
   expose: 8083
   port: 80
+  use_external_network: true
 
 # meta, do not modify
 meta:
