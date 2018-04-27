@@ -3,7 +3,7 @@
 # config can be modify any time,
 # and use push/update command to sync to backend
 service:
-  image: docker-repos:8123/g2/axle:2.0.1.RC0.build418
+  image: docker-repos:8123/g2/axle:2.0.1.RC0.build420
   name: axle
   environment:
     AXLE_MOCK_ENABLED: true
@@ -16,7 +16,7 @@ service:
     MYSQL_USER: g2
     MYSQL_PASSWORD: g2
   cmd: bundle exec thin start
-  bootstrap_cmd: bundle exec rake db:migrate:up db:seeds:setup
+  bootstrap_cmd: bundle exec rake db:migrate:up db:mocks:setup
 
 resources:
   mysql5.7:
