@@ -16,6 +16,7 @@ service:
     MYSQL_USER: g2
     MYSQL_PASSWORD: g2
   cmd: bundle exec thin start
+  port: 80
   bootstrap_cmd: bundle exec rake db:migrate:up db:mock:setup
 
 resources:
