@@ -4,7 +4,7 @@
 # and use push/update command to sync to backend,
 # however after push image field are not allow to change.
 resource:
-  image: docker-repos:8123/yale/mysql:1.1.mysql-5.7.13
+  image: docker-repos:8123/yale/mysql:1.4.mysql-5.7.13
   name: db
   environment:
     MYSQL_USER: laxino
