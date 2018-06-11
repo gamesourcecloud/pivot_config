@@ -15,10 +15,10 @@ service:
     MYSQL_DATABASE: g2_axle_test
     MYSQL_USER: g2
     MYSQL_PASSWORD: g2
-  #cmd: bundle exec thin start
-  cmd: sleep 1000000
+  cmd: bundle exec thin start
+  bootstrap_cmd: sleep 1000000
   port: 80
-  bootstrap_cmd: bundle exec rake db:migrate:up db:mock:setup
+  #bootstrap_cmd: bundle exec rake db:migrate:up db:mock:setup
 
 resources:
   mysql5.7:
