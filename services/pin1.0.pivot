@@ -3,7 +3,7 @@
 # config can be modify any time,
 # and use push/update command to sync to backend
 service:
-  image: docker-repos:8123/g2/gimbal:1.0.1RC0.build13
+  image: docker-repos:8123/g2/gimbal:1.0.1RC0.build14
   name: pin
   environment:
     GIMBAL_PORT: 80
