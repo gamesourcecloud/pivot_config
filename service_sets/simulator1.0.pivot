@@ -7,6 +7,7 @@ services:
   game_backend1.0:
   wheel1.3.0:
   game_client1.0:
+  pin1.0:
 resources:
   mysql5.7:
 # meta, do not modify
