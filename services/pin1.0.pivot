@@ -14,7 +14,7 @@ service:
 
 # meta, do not modify
 meta:
-  id: 01CBXTMEJ3YVE87SDEBSDTRRZ5
+  id: 01CBXTMEJ3YVE87SDEBSDTRRZ6
   name: pin1.0
   kind: service
   version: 0.5.0
