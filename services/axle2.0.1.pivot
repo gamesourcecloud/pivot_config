@@ -19,6 +19,7 @@ service:
     MATH_MODEL: 88.05%
   cmd: bundle exec thin start
   port: 80
+  expose: 8084
   bootstrap_cmd: bundle exec rake db:migrate:up db:mock:setup
 
 resources:
