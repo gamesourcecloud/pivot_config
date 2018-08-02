@@ -1,0 +1,19 @@
+---
+# Config data
+# config can be modify any time,
+# and use push/update command to sync to backend
+services:
+  axle2.0.1:
+    port: 80
+    expose: 8084
+  wheel1.3.0:
+    port: 80
+    expose: 8087
+resources:
+  mysql5.7:
+# meta, do not modify
+meta:
+  id: 01CKWCCQJY3DW54QN1TXWHJ6RT
+  name: game_engine1.0
+  kind: service_set
+  version: 0.5.0
